@@ -1,0 +1,29 @@
+PODS:
+  - LCalendar (0.0.1):
+    - LCalendar/CalendarView (= 0.0.1)
+    - Masonry
+  - LCalendar/CalendarView (0.0.1):
+    - LCalendar/CalendarView/CalendarCollectionView (= 0.0.1)
+    - Masonry
+  - LCalendar/CalendarView/CalendarCollectionView (0.0.1):
+    - Masonry
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - LCalendar (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+
+EXTERNAL SOURCES:
+  LCalendar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LCalendar: 33dc51352166da620666838bc7831e25813d40fc
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 769de5e59e70a5e12773a9a870fe638daa8e8ebd
+
+COCOAPODS: 1.7.4
