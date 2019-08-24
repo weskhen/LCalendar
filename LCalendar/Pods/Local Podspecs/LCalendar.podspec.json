@@ -1,6 +1,6 @@
 {
   "name": "LCalendar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "日历选择器",
   "description": "一款比钉钉更友善的日历选择器, 顺畅无卡顿",
   "homepage": "https://github.com/weskhen/LCalendar.git",
@@ -15,8 +15,8 @@
     "ios": "9.0"
   },
   "source": {
-    "git": "git@github.com:weskhen/LCalendar.git",
-    "tag": "0.0.1"
+    "git": "https://github.com/weskhen/LCalendar.git",
+    "tag": "0.0.2"
   },
   "module_name": "LCalendar",
   "dependencies": {

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LCalendar"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "日历选择器"
   s.description  = <<-DESC
   一款比钉钉更友善的日历选择器, 顺畅无卡顿

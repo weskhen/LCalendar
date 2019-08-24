@@ -1,11 +1,11 @@
 PODS:
-  - LCalendar (0.0.1):
-    - LCalendar/CalendarView (= 0.0.1)
+  - LCalendar (0.0.2):
+    - LCalendar/CalendarView (= 0.0.2)
     - Masonry
-  - LCalendar/CalendarView (0.0.1):
-    - LCalendar/CalendarView/CalendarCollectionView (= 0.0.1)
+  - LCalendar/CalendarView (0.0.2):
+    - LCalendar/CalendarView/CalendarCollectionView (= 0.0.2)
     - Masonry
-  - LCalendar/CalendarView/CalendarCollectionView (0.0.1):
+  - LCalendar/CalendarView/CalendarCollectionView (0.0.2):
     - Masonry
   - Masonry (1.1.0)
 
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LCalendar: 33dc51352166da620666838bc7831e25813d40fc
+  LCalendar: 3a82db93614679f32df04de6d1e99cfacc91b757
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 769de5e59e70a5e12773a9a870fe638daa8e8ebd
