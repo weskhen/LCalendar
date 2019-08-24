@@ -28,13 +28,16 @@
 @property (nonatomic, strong) LCalendarBottomArrowView  *arrowView;
 @property (nonatomic, strong) UITableView  *tableView;
 
+@property (nonatomic, weak) id <LCalendarViewDelegate> delegate;
+
 @end
 @implementation LCalendarView
 
-- (instancetype)initWithFrame:(CGRect)frame tableView:(nonnull UITableView *)tableView
+- (instancetype)initWithFrame:(CGRect)frame tableView:(UITableView *)tableView delegate:(id <LCalendarViewDelegate> )delegate
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.delegate = delegate;
         self.tableView = tableView;
         [self addSubview:self.weekTipView];
         [self addSubview:self.scrollView];
@@ -227,8 +230,8 @@
 
 /// 该日期需要展示的提示文案
 - (NSString *)calendarTipStringWithDate:(NSDate *)date {
-    if ([self.calendarDelegate respondsToSelector:@selector(calendarTipStringWithDate:)]) {
-        return [self.calendarDelegate calendarTipStringWithDate:date];
+    if ([self.delegate respondsToSelector:@selector(calendarTipStringWithDate:)]) {
+        return [self.delegate calendarTipStringWithDate:date];
     }
     return nil;
 }
@@ -238,8 +241,8 @@
 }
 
 - (void)currentCalendarDateChanged:(NSDate *)date {
-    if ([self.calendarDelegate respondsToSelector:@selector(currentViewDateChanged:)]) {
-        [self.calendarDelegate currentViewDateChanged:date];
+    if ([self.delegate respondsToSelector:@selector(currentViewDateChanged:)]) {
+        [self.delegate currentViewDateChanged:date];
     }
 }
 
@@ -287,8 +290,9 @@
 
 - (LCalendarContentView *)calendarView {
     if (!_calendarView) {
-        _calendarView = [[LCalendarContentView alloc]initWithFrame:CGRectMake(0, 0, LScreenWidth, KCalendarViewHeight) currentDate:[NSDate date]];
+        _calendarView = [[LCalendarContentView alloc] initWithFrame:CGRectMake(0, 0, LScreenWidth, KCalendarViewHeight)];
         _calendarView.delegate = self;
+        [_calendarView initContenWithStartDate:[NSDate date]];
     }
     return _calendarView;
 }

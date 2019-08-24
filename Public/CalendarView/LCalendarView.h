@@ -21,12 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LCalendarView : UIView
 
-@property (nonatomic, weak) id <LCalendarViewDelegate> calendarDelegate;
-
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 
 /// tableView 传入不能为空
-- (instancetype)initWithFrame:(CGRect)frame tableView:(UITableView *)tableView;
+- (instancetype)initWithFrame:(CGRect)frame tableView:(UITableView *)tableView delegate:(id <LCalendarViewDelegate> )delegate;
 
 /// 展示周视图
 - (void)showSignleWeekView;

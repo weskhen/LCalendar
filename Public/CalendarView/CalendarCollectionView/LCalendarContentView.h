@@ -36,12 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface LCalendarContentView : UIView
-
-/// date: 日历展示的时间
-- (instancetype)initWithFrame:(CGRect)frame currentDate:(NSDate *)date;
-
 /// 事件代理
 @property (nonatomic, weak) id <LCalendarContentViewDelegate> delegate;
+
+/// date: 日历展示的时间
+- (void)initContenWithStartDate:(NSDate *)date;
 
 /// 滚动到单周需要的offset
 - (CGFloat)singleWeekOffsetY;

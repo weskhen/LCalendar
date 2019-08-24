@@ -47,22 +47,23 @@
 @end
 @implementation LCalendarContentView
 
-- (instancetype)initWithFrame:(CGRect)frame currentDate:(NSDate *)date
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.currentDate = date;
-
         self.backgroundColor = [LCalendarAppearance share].calendarBgColor;
         [self addSubview:self.collectionView];
-        
-        [self reloadDateDatas];
         [self addSubview:self.maskView];
     }
     return self;
 }
 
 #pragma mark - publicMethod
+
+- (void)initContenWithStartDate:(NSDate *)date {
+    self.currentDate = date;
+    [self reloadDateDatas];
+}
+
 - (void)setSingleWeek:(BOOL)singleWeek {
     [LCalendarAppearance share].isShowSingleWeek = singleWeek;
     [self reloadDateDatas];

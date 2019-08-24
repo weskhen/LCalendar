@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "wujian" => "wujian516411567@163.com" } 
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "git@github.com:weskhen/LCalendar.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/weskhen/LCalendar.git", :tag => "#{s.version}" }
   
   s.ios.deployment_target = '9.0'
   s.module_name = 'LCalendar'
